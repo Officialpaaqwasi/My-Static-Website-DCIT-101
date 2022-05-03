@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equvi="X-UA-Compatible " content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>House Website</title>
+    <link rel="stlysheet" href="style.css">
+</head>
+<body>
+    <div class="banner"> 
+        <div class="navbar">
+            <img src="homologo.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">KITCHEN</a></li>
+                <li><a href="#">BEDROOM</a></li>
+                <li><a href="#">DINING</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>DESIGN YOUR HOME</h1>
+            <p>Subcribe to Home Tab Tutorials Youtube channel to 
+                watch more videos,<br> press the bell icon to get latest updates</p>
+                <button type="button"><span></span>WATCH MORE</button>
+                <button type="button"><span></span>SUBSCRIBE</button>
+            </div>
+            <div class="social">
+                <a href="#">Facebook<i class="fa-brands fa-facebook"></i></a>
+                <a href="#">Youtube<i class="fa-brands fa-youtube"></i></a>
+                <a href="#">Instagram<i class="fa-brands fa-instagram"></i></a>
+                <a href="#">Twitter<i class="fa-brands fa-twitter"></i></a>
+                <a href="#">Whatsapp<i class="fa-brands fa-whatsapp"></i></a>
+
+            </div>
+        
+    </div>
+</body>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family:  sans-serif;
+}
+ .banner{
+    height: 100vh;
+    width: 100%;
+    background-image: url(home.jpg);
+    background-size: cover;
+    background-position: center;
+ }
+ .navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 110px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    
+
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 90px;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 60px;
+    margin-top: 80px;
+}
+.content p{
+    margin:20px auto;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: beige;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+   width:100%;
+}
+button:hover{
+    border: none;
+}
+/* Social media Icons*/
+.social{
+    position:fixed;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-290px,0);
+}
+.social a{
+    color: #fff;
+    background: rgba(249,242,242,0.4);
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    display: block;
+    margin: 5px;
+    padding: 20px;
+    width: 300px;
+    text-align: right;
+    border-radius: 50px;
+    transition: 1s;
+    transition-property: transform;
+}
+.social a:hover{
+    transform: translate(140px,0);
+}
+.socail i{
+    margin-left: 10px;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+.sociala:nth-child(1){
+    color:#0a9af3;
+}
+.sociala:nth-child(2){
+    color:#f70808;
+}
+.sociala:nth-child(3){
+    color:transparent;
+    background-image: linear-gradient(45deg,#ffdf9e,#e56969,#8a49a1);
+    font-weight:500;
+}
+.sociala:nth-child(4){
+    color:#049af7;
+}
+.sociala:nth-child(5){
+    color:#0af84a;
+}
+</style>
+</html>
